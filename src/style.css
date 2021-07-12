@@ -1,0 +1,97 @@
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+
+  position: relative;
+  display: grid;
+  grid-template-rows: 66px 64px 1fr 80px;
+  height: 100vh;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: #fff;
+  color: #2c3e50;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover {
+  background: #e7e7e7;
+}
+
+.title-bar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e6e1a1;
+  padding: 16px;
+}
+
+.title-bar__title {
+  font-size: 20px;
+}
+
+.title-bar__buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.todo-search {
+  position: sticky;
+  top: 66px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+.todo-search input {
+  box-sizing: border-box;
+  border: 1px solid #2c3e50;
+  outline: none;
+  padding: 8px;
+  width: 480px;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-self: center;
+  width: 480px;
+}
+
+.todo-add-button {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+.todo-add-button button {
+  height: 48px;
+  width: 480px;
+  background: #e6e1a1;
+}
+.todo-add-button button:hover {
+  background: #d1cd9b;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f1f0e6;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.todo__remove-button {
+  background: transparent;
+}
