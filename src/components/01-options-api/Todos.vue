@@ -38,7 +38,6 @@ export default {
       this.todos.push(todo);
     },
     removeTodo(todoId) {
-      console.log(todoId);
       this.todos = this.todos.filter(({ id }) => id !== todoId);
     },
   },
