@@ -2,9 +2,9 @@
   <div class="title-bar">
     <div class="title-bar__title">Todo app</div>
     <div class="title-bar__buttons">
-      <button @click="setComponent(0)">Options API</button>
-      <button @click="setComponent(1)">Mixins</button>
-      <button @click="setComponent(2)">Composition API</button>
+      <button :class="{ active: componentIndex === 0 }" @click="componentIndex = 0">Options API</button>
+      <button :class="{ active: componentIndex === 1 }" @click="componentIndex = 1">Mixins</button>
+      <button :class="{ active: componentIndex === 2 }" @click="componentIndex = 2">Composition API</button>
     </div>
   </div>
   <component :is="component" />
@@ -23,14 +23,9 @@ export default defineComponent({
   setup() {
     const componentIndex = ref(0);
 
-    function setComponent(component: number) {
-      componentIndex.value = component;
-    }
-
     return {
       component: computed(() => components[componentIndex.value]),
-
-      setComponent,
+      componentIndex,
     };
   },
 });

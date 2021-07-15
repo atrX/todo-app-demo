@@ -42,6 +42,10 @@ button:hover {
   gap: 8px;
 }
 
+.title-bar__buttons > .active {
+  background: #c0bc8b;
+}
+
 .todo-search {
   position: sticky;
   top: 66px;
