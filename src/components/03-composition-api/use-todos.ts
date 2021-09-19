@@ -13,7 +13,7 @@ export function useTodos() {
     todos.value.push(todo);
   }
 
-  function removeTodo(todoId) {
+  function removeTodo(todoId: number) {
     todos.value = todos.value.filter(({ id }) => id !== todoId);
   }
 

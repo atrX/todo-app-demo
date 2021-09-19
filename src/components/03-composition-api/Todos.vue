@@ -12,11 +12,13 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from 'vue';
+
 import { useSearch } from './use-search';
 import { useTodos } from './use-todos';
 
-export default {
+export default defineComponent({
   setup() {
     const { todos, addTodo, removeTodo } = useTodos();
     const { searchQuery, searchResult: filteredTodos } = useSearch(todos, 'title');
@@ -29,5 +31,5 @@ export default {
       removeTodo,
     };
   },
-};
+});
 </script>
